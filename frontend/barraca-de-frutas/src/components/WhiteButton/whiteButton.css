@@ -1,0 +1,34 @@
+.whiteButton-links{
+    color: #DA0D1E;
+    background-color: white;
+    border-radius: 100px;
+    border-color: #DA0D1E;
+    border-width: 1px;
+    border-style: solid;
+    height: 40px;
+    width: 132px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 2px 6px 2px #00000026;
+    box-shadow: 0px 1px 2px 0px #0000004D;
+    border: 0 none;
+    outline: 0;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.whiteButton-links:hover{
+    color:white;
+    background-color: red;
+}
+
+
+.whiteButton-container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
