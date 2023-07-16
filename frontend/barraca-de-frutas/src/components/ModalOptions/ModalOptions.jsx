@@ -5,7 +5,6 @@ import './modalOptions.css'
 export function ModalOptions({isOpen, setOpen, idFruit}){
 
     const [modalDelete, setModalDelete] = useState(false)
-    console.log(idFruit)
 
     const openModalDelete = () =>{
         setModalDelete(!modalDelete)
@@ -14,7 +13,6 @@ export function ModalOptions({isOpen, setOpen, idFruit}){
     var clicks = 0
     function add(){
         clicks ++
-        console.log(clicks)
         if(clicks > 1){
             setOpen(false)
         }
