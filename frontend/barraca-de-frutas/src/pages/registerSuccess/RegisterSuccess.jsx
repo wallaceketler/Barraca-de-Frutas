@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 export function RegisterSuccess(){
 
-    //pega nome da fruta
+    //pega nome da fruta da URL
     const {fruit} = useParams()
     return(
         <>

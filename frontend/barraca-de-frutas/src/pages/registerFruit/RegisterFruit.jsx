@@ -5,18 +5,20 @@ import { useState } from 'react'
 
 export function RegisterFruit(){
 
-    const [redirect, setRedirect] = useState(false)
+    const [redirect, setRedirect] = useState(false) //usado para redirecionar
     const [nameFruit, setNameFruit] = useState() //usado para passar parâmetro
 
     const saveOnLocalStorage = (e) =>{
-        e.preventDefault()
+        e.preventDefault()  //evita comportamento padrão de form
         var lastIndex = localStorage.getItem('lastIndex')   //grava valor de índice
-        var index
+        var index   //índice a ser salvo
+        //verifico se já existe algum índice salvo
         if(lastIndex == null){
             index = 1
         }else{
             index = parseInt(lastIndex) + 1
         }
+        //pega dados do form
         const formData = new FormData(e.target)
         const data = Object.fromEntries(formData)
         var dataToSave = {
@@ -24,6 +26,7 @@ export function RegisterFruit(){
             "price": data.price,
             "quantity": data.quantity
         }
+        //salvo dados no localStorage e passo parâmetro pra nova rota
         localStorage.setItem(index,JSON.stringify(dataToSave))
         localStorage.setItem("lastIndex", index)
         setNameFruit(data.name)

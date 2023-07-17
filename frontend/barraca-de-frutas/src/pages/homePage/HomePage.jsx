@@ -10,14 +10,15 @@ export function HomePage(){
     //retira o valor usado para guardar último índice
     keys.splice(keys.indexOf("lastIndex"),1)
 
+    //verifica se existem frutas cadastradas
     var empty
     if(keys.length === 0){
         empty = true
     }else{
-        empty = false
-        //define os itens a serem mostrados na tela     
+        empty = false 
     }
 
+    //define gerência de estado de modal, de Id para modal e de lista de frutas para busca
     const [openModal, setOpenModal] = useState(false)
     const [idFruit, setIdFruit] = useState("")
     var   [listFruits, setListFruits] = useState(
@@ -40,16 +41,19 @@ export function HomePage(){
         )
     )
 
+    //muda estado e passa id para modal
     const modal = (id) =>{
         setIdFruit(id)
         setOpenModal(!openModal)
     }
 
+    //realiza busca
     const search = (e) =>{
         e.preventDefault()
         const formData = new FormData(e.target)
         const data = Object.fromEntries(formData)
         console.log("alo " + data.searchData)
+        //caso em que busca é vazia
         if(data.searchData === ''){
             setListFruits(
                 keys.map((i)=>
@@ -70,6 +74,7 @@ export function HomePage(){
                     </li>
                 )
             )
+        //caso em que busca tem algo, verifico se string está contida nas cadastradas
         }else{
             var newKeys = []
             keys.forEach((i)=>{
@@ -100,6 +105,7 @@ export function HomePage(){
         
     }
 
+    //retorno telas diferentes dependendo de valor de booleano empty
     return(
         <>  
             {empty ? (

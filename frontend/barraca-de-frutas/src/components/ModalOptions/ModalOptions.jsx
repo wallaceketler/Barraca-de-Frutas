@@ -4,31 +4,25 @@ import './modalOptions.css'
 
 export function ModalOptions({isOpen, setOpen, idFruit}){
 
+    //gerencia de estado do segundo modal de remoção de fruta
     const [modalDelete, setModalDelete] = useState(false)
-
     const openModalDelete = () =>{
         setModalDelete(!modalDelete)
     }
-
+    //lógica para fechar primeiro modal
     var clicks = 0
-
-    var fora = false
-    var dentro = false
     function add(){
         clicks ++
         if(clicks > 1){
             setOpen(false)
         }
     }
-
-
-
     function none(){
         clicks = 0
         setOpen(true)
     }
     
-
+    //retorna diferentes html dependendo do estado 
     if(isOpen){
         return(
             <div className='ModalOptions-container' onClick={add}>

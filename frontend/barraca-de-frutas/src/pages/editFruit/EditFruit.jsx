@@ -7,10 +7,12 @@ import { useState } from 'react'
 
 export function EditFruit(){
 
-    const [redirect, setRedirect] = useState(false)
-    const {idFruit} = useParams()
-    const Initialdata = JSON.parse(localStorage.getItem(idFruit))
-    const [initialName, setInitialName] = useState(Initialdata.name)
+    const [redirect, setRedirect] = useState(false) //usado para redirecionar
+    const {idFruit} = useParams()   //usado para pegar dados de URL
+    const Initialdata = JSON.parse(localStorage.getItem(idFruit)) //pega dados de parâmetro
+    
+    //define gerência de estados de variáveis iniciais
+    const [initialName, setInitialName] = useState(Initialdata.name) 
     const [initialPrice, setInitialPrice] = useState(Initialdata.price)
     const [initialQuantity, setInitialQuantity] = useState(Initialdata.quantity)
 
@@ -23,7 +25,8 @@ export function EditFruit(){
     const handleChangeQuantity = event =>{
         setInitialQuantity(event.target.value)
     }
-
+    
+    //atualiza dados no localStorage
     const saveOnLocalStorage = (e) =>{
         e.preventDefault()
     

@@ -22,5 +22,5 @@ export function RedButton({link, children, ...restProps}){
                 </div>
             </>
         )
-        }
+    }
 }
