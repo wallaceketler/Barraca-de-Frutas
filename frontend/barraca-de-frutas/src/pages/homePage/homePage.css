@@ -157,9 +157,23 @@
     top: 216px;
     left: 16px;
     position: relative;
+
 }
 
 #homePage-emtpyButton{
     position: relative;
     text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: left;
+}
+
+#homePage-plus{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    right: 10px;
+    bottom: 2px;
 }

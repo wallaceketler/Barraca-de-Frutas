@@ -106,7 +106,7 @@ export function HomePage(){
                 <div className='homePage-empty'>
                     <div className='homePage-emptyText'>Cadastre sua primeira fruta</div>
                     <RedButton id="homePage-emtpyButton" link={true} href="/cadastrar-fruta">
-                        + Cadastrar Fruta
+                    <img id="homePage-plus" src={require('../../assets/plus.png')} alt="plus"/> Cadastrar Fruta
                     </RedButton>
                 </div>
             ): (

@@ -11,6 +11,9 @@ export function ModalOptions({isOpen, setOpen, idFruit}){
     }
 
     var clicks = 0
+
+    var fora = false
+    var dentro = false
     function add(){
         clicks ++
         if(clicks > 1){
@@ -18,10 +21,13 @@ export function ModalOptions({isOpen, setOpen, idFruit}){
         }
     }
 
+
+
     function none(){
         clicks = 0
         setOpen(true)
     }
+    
 
     if(isOpen){
         return(

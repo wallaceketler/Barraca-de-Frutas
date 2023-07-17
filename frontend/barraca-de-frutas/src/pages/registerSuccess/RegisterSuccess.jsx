@@ -16,11 +16,11 @@ export function RegisterSuccess(){
                     <img src={require("../../assets/registersuccess.png")} alt="sucesso"/>
                 </div>
                 <div className='registerSuccess-text'>
-                    <h3>Fruta cadastrada</h3>
+                    <p>Fruta cadastrada</p>
                     <div className='registerSuccess-subtext'>Você cadastrou a fruta {fruit} com sucesso!</div>
                 </div>
                 <div className='registerSuccess-button'>
-                    <RedButton link={true} href='/'>Voltar ao início</RedButton>
+                    <RedButton id="registerSucess-link" link={true} href='/'>Voltar ao início</RedButton>
                 </div>
             </div>
         </>

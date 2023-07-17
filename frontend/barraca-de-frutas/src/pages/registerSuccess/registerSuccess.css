@@ -9,7 +9,6 @@
 
 .registerSuccess-header>a>img{
     width: 32px;
-   
 }
 
 .registerSuccess-image>img{
@@ -21,20 +20,33 @@
     height: 200px;   
 }
 
-.registerSuccess-button>a{
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: 150px;
+#registerSucess-link{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: center;
 }
 
 .registerSuccess-text{
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 20px;
 }
 
-.registerSuccess-text>h3{
-    size: 19px;
+.registerSuccess-text>p{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    width: 170px;
+    height: 24px;
+    position: relative;
+}
+
+#registerSucess-link{
+    position: relative;
+    top: 20px;
 }
 
 .registerSuccess-subtext{
