@@ -50,19 +50,19 @@ export function EditFruit(){
                         <div className='EditFruit-inputNameImage'>
                             <img src={require("../../assets/name.png")} alt="x"/>
                         </div>
-                        <input value={initialName} onChange={handleChangeName} maxLength="10" required name = "name" placeholder='Nome da fruta'></input><br/>
+                        <input pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" value={initialName} onChange={handleChangeName} maxLength="26" required name = "name" placeholder='Nome da fruta'></input><br/>
                     </div>
                     <div className='EditFruit-inputPrice'>
                         <div className='EditFruit-inputPriceImage'>
                             <img src={require("../../assets/price.png")} alt="x"/>
                         </div>
-                        <input value={initialPrice} onChange={handleChangePrice} required name = "price" placeholder='Preço do Kilo'></input><br/>
+                        <input pattern="[0-9]+(,[0-9]+)?" value={initialPrice} onChange={handleChangePrice} required name = "price" placeholder='Preço do Kilo'></input><br/>
                     </div>
                     <div className='EditFruit-inputQuantity'>
                         <div className='EditFruit-inputQuantityImage'>
                             <img src={require("../../assets/quantity.png")} alt="x"/>
                         </div>
-                        <input value={initialQuantity} onChange={handleChangeQuantity} required name = "quantity" placeholder='Quantidade no estoque'></input><br/>
+                        <input pattern="[0-9]+" value={initialQuantity} onChange={handleChangeQuantity} required name = "quantity" placeholder='Quantidade no estoque'></input><br/>
                     </div>
                     <RedButton type="submit">Atualizar Fruta</RedButton>
                 </form>

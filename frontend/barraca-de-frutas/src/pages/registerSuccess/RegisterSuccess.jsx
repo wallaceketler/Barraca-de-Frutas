@@ -20,7 +20,7 @@ export function RegisterSuccess(){
                     <div className='registerSuccess-subtext'>Você cadastrou a fruta {fruit} com sucesso!</div>
                 </div>
                 <div className='registerSuccess-button'>
-                    <RedButton href='/'>Voltar ao início</RedButton>
+                    <RedButton link={true} href='/'>Voltar ao início</RedButton>
                 </div>
             </div>
         </>

@@ -1,6 +1,5 @@
 import './homePage.css'
 import { RedButton } from '../../components/RedButton/RedButton'
-import { Navigate } from 'react-router-dom'
 import { ModalOptions } from '../../components/ModalOptions/ModalOptions'
 import { useState } from 'react'
 
@@ -10,8 +9,6 @@ export function HomePage(){
     var keys = Object.keys(localStorage)
     //retira o valor usado para guardar último índice
     keys.splice(keys.indexOf("lastIndex"),1)
-
-    
 
     var empty
     if(keys.length === 0){
@@ -76,7 +73,7 @@ export function HomePage(){
         }else{
             var newKeys = []
             keys.forEach((i)=>{
-                if(JSON.parse(localStorage.getItem(i)).name === data.searchData){
+                if(JSON.parse(localStorage.getItem(i)).name.includes(data.searchData)){
                     newKeys.push(i)
                 }
             })
@@ -106,9 +103,11 @@ export function HomePage(){
     return(
         <>  
             {empty ? (
-                <div>
-                    <div>Cadastre sua primeira fruta</div>
-                    <RedButton href="/cadastrar-fruta">+ Cadastrar Fruta</RedButton>
+                <div className='homePage-empty'>
+                    <div className='homePage-emptyText'>Cadastre sua primeira fruta</div>
+                    <RedButton id="homePage-emtpyButton" link={true} href="/cadastrar-fruta">
+                        + Cadastrar Fruta
+                    </RedButton>
                 </div>
             ): (
                 <div>

@@ -43,19 +43,19 @@ export function RegisterFruit(){
                         <div className='RegisterFruit-inputNameImage'>
                             <img src={require("../../assets/name.png")} alt="x"/>
                         </div>
-                        <input maxLength="10" required name = "name" placeholder='Nome da fruta'></input><br/>
+                        <input pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" maxLength="26" required name = "name" placeholder='Nome da fruta'></input><br/>
                     </div>
                     <div className='RegisterFruit-inputPrice'>
                         <div className='RegisterFruit-inputPriceImage'>
                             <img src={require("../../assets/price.png")} alt="x"/>
                         </div>
-                        <input required name = "price" placeholder='Preço do Kilo'></input><br/>
+                        <input pattern="[0-9]+(,[0-9]+)?" required name = "price" placeholder='Preço do Kilo'></input><br/>
                     </div>
                     <div className='RegisterFruit-inputQuantity'>
                         <div className='RegisterFruit-inputQuantityImage'>
                             <img src={require("../../assets/quantity.png")} alt="x"/>
                         </div>
-                        <input required name = "quantity" placeholder='Quantidade no estoque'></input><br/>
+                        <input pattern="[0-9]+" required name = "quantity" placeholder='Quantidade no estoque'></input><br/>
                     </div>
                     <RedButton type="submit">Cadastrar Fruta</RedButton>
                 </form>

@@ -2,9 +2,6 @@
     color: #DA0D1E;
     background-color: white;
     border-radius: 100px;
-    border-color: #DA0D1E;
-    border-width: 1px;
-    border-style: solid;
     height: 40px;
     width: 132px;
     text-decoration: none;
@@ -17,6 +14,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 1px solid #DA0D1E;
 }
 
 .whiteButton-links:hover{

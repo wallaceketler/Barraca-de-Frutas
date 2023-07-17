@@ -151,3 +151,15 @@
     margin-top: 4px;
   
 }
+.homePage-emptyText{
+    width: 328px;
+    height: 24px;
+    top: 216px;
+    left: 16px;
+    position: relative;
+}
+
+#homePage-emtpyButton{
+    position: relative;
+    text-align: center;
+}
