@@ -1,7 +1,6 @@
 # Barraca-de-Frutas
   
-  Um repositório para criar um projeto em React para treino
-
+  Um repositório para criar um projeto em React como portfólio
 # Como usar?
 
 ```console
