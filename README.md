@@ -1,11 +1,11 @@
-# Barraca-de-Frutas
+# fruit-stand
   
-  Um repositório para criar um projeto em React como portfólio
-# Como usar?
+  A repository to apply React concepts as a portfolio
+# How to use?
 
 ```console
   git clone https://github.com/wallaceketler/Barraca-de-Frutas.git
-  cd Barraca-de-Frutas/frontend/barraca-de-frutas
+  cd fruit-stand/frontend/barraca-de-frutas
   npm i
   npm start
 ```
