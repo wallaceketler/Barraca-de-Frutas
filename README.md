@@ -4,7 +4,7 @@
 # How to use?
 
 ```console
-  git clone https://github.com/wallaceketler/Barraca-de-Frutas.git
+  git clone https://github.com/wallaceketler/fruit-stand.git
   cd fruit-stand/frontend/barraca-de-frutas
   npm i
   npm start
